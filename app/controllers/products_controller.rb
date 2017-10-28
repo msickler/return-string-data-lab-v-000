@@ -22,6 +22,11 @@ class ProductsController < ApplicationController
     render plain: product.description
   end
 
+  def inventory
+    product = Product.find_by_id(params[:id])
+    render plain: (!product.inventory.nil? && product.inventory > 0).to_s
+  end 
+
   private
 
   def products_path
