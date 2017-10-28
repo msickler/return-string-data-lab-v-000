@@ -5,6 +5,12 @@ class ProductsController < ApplicationController
   end
 
   def new
+    @product = Product.new
   end
+
+  def create 
+    @product = Product.new 
+    @product.save 
+  end 
 
 end
