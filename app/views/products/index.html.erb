@@ -2,7 +2,7 @@
 <% @products.each do |product| %>
   <h1><%= product.name %></h1>
   <div id="product.<%= product.id %>">
-  <%= product.description truncated %>
+  <%= truncated product.description %>
+  <button type="button" class="js-more" id="<%= product.id %>"> More </button>
 </div>
 <% end %>
-
