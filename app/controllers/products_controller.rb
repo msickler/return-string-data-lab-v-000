@@ -17,10 +17,15 @@ class ProductsController < ApplicationController
     end
   end
 
-  private 
+  def description 
+    product = Product.find_by_id(params[:id])
+    render plain: product.description
+  end 
+
+  private
 
   def products_path
     params.require(:product).permit(:name, :inventory, :description, :price)
-  end 
+  end
 
 end
