@@ -1,3 +1,5 @@
-<% @products.each do |product| %>
-<%= product.name %> - <%= product.description truncated %>
-<% end %> 
+<ul>
+  <% @products.each do |product| %>
+  <li><%= product.name %> - <%= product.description truncated %></li>
+<% end %>
+</ul>
