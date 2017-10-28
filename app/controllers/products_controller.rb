@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
 
   private
 
-  def product_path
+  def product_params
     params.require(:product).permit(:name, :inventory, :description, :price)
   end
 
